@@ -20,7 +20,7 @@ const MainLayout = () => {
           </ul>
         </nav>
       </header>
-      {/* <ToasterProvider styles={{ error: { color: 'red' }, success: { color: 'limegreen' } }}> */}
+      {/* <ToasterProvider styles={{ position: 'bottom-right' }}> */}
       <ToasterProvider>
         <Outlet />
       </ToasterProvider>
