@@ -14,7 +14,7 @@ export const ToasterContext = createContext();
 const ToasterProvider = ({ children, styles = { position: 'top-right' } }) => {
   const [messages, setMessages] = useState([
     { msg: "I'm a toaster 🫖", id: Date.now(), state: 'success' },
-    { msg: 'And another!', id: Date.now() + 1, state: 'error' },
+    { msg: 'And another one!', id: Date.now() + 1, state: 'error' },
   ]);
 
   const deleteToast = (msg) => setMessages((prev) => prev.filter((m) => m.id !== msg));

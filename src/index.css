@@ -100,7 +100,8 @@ footer {
 
 .toast-container {
   position: absolute;
-  margin: 2rem 5rem;
+  margin: 1rem 5rem;
+  padding-block: 1rem;
   overflow: hidden;
   right: 0;
   top: 0;
