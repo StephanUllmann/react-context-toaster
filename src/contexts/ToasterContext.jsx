@@ -98,5 +98,5 @@ const Toast = ({ message, ind, deleteToast, styles, duration = 5000 }) => {
 
 const ToastContainer = ({ children, styles }) => {
   const { position } = styles;
-  return <div className={`toast-container ${position}`}>{children}</div>;
+  return <div className={`toaster ${children.length ? 'toast-container' : ''} ${position}`}>{children}</div>;
 };
