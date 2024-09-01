@@ -30,12 +30,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
   min-width: 320px;
-  min-height: 100vh;
 
-  & > #root > * {
+  & #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     max-width: 1248px;
     margin-inline: auto;
   }
@@ -87,4 +87,105 @@ nav ul {
   gap: 3rem;
   list-style: none;
   padding: 0;
+}
+.button-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.toast-container {
+  position: absolute;
+  padding: 2rem 5rem;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &.bottom-right {
+    flex-direction: column-reverse;
+  }
+}
+.bottom-right {
+  top: unset;
+  bottom: 0;
+}
+
+.toast {
+  background-color: hsl(208, 37%, 20%);
+  padding: 1rem 1.75rem;
+  width: 17.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: clip;
+  cursor: pointer;
+  top: -100vh;
+  box-shadow: 2px 2px 3px hsl(0, 0%, 9%);
+  animation: enter-top 750ms cubic-bezier(0.53, 1.02, 0.76, 1.07) forwards;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .toast-bar {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background-color: red;
+    width: 100%;
+    left: 0;
+    border-radius: 0.5rem;
+    transition: width 100ms linear;
+  }
+}
+
+.enter-bottom {
+  animation: enter-bottom 750ms cubic-bezier(0.53, 1.02, 0.76, 1.07) forwards;
+}
+
+.leave {
+  animation: leave-top 500ms cubic-bezier(0.53, 1.02, 0.76, 1.07) forwards;
+}
+.leave-bottom {
+  animation: leave-bottom 500ms cubic-bezier(0.53, 1.02, 0.76, 1.07) forwards;
+}
+
+@keyframes enter-top {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 0vh;
+  }
+}
+@keyframes leave-top {
+  to {
+    top: -100vh;
+  }
+  from {
+    top: 0vh;
+  }
+}
+@keyframes enter-bottom {
+  from {
+    top: 100vh;
+  }
+  to {
+    top: 0vh;
+  }
+}
+@keyframes leave-bottom {
+  to {
+    top: 100vh;
+  }
+  from {
+    top: 0vh;
+  }
 }

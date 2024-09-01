@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import ToasterProvider from '../contexts/ToasterContext';
 
 const MainLayout = () => {
   return (
@@ -19,7 +20,13 @@ const MainLayout = () => {
           </ul>
         </nav>
       </header>
-      <Outlet />
+      {/* <ToasterProvider styles={{ error: { color: 'red' }, success: { color: 'limegreen' } }}> */}
+      <ToasterProvider>
+        <Outlet />
+      </ToasterProvider>
+      <footer>
+        <h2>This is a footer™️</h2>
+      </footer>
     </>
   );
 };
