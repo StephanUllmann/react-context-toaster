@@ -97,6 +97,37 @@ nav ul {
 footer {
   margin-top: auto;
 }
+.contact-form {
+  margin-block: 3rem;
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 15rem;
+  }
+  input,
+  textarea {
+    font: inherit;
+    color: inherit;
+    padding: 0.5rem 0.75rem;
+  }
+  textarea {
+    resize: none;
+    height: 5lh;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 .toast-container {
   position: absolute;
