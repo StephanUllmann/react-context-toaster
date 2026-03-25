@@ -25,7 +25,7 @@ const MainLayout = () => {
         <Outlet />
       </ToasterProvider>
       <footer>
-        <h2>This is a footer™️</h2>
+        <h2>This is a proper footer™️</h2>
       </footer>
     </>
   );
